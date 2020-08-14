@@ -1,22 +1,29 @@
-<h1>Cocktails#show</h1>
-<p>Find me in app/views/cocktails/show.html.erb</p>
+<div class="show_container" >
+   <div class="show_image">
+      <%= cl_image_tag @cocktail.photo.key, height: 500, width: 600, crop: :fill %>
+   </div>
+
+    <div class="show_instructions">
+
+        <h1>You've selected a</h1>
+
+        <h1>
+            <%= @cocktail.name %>!
+        </h1>
+        <h2>Excellent choice ✨ !</h2>
 
 
-<p>
-    <strong>Name: </strong><%= @cocktail.name %>
-</p>
+        <p>
+            <strong>For this let's use the following ingredients: </strong>
+            <% @cocktail.doses.each do |dose| %>
+              <li><%= dose.description %> <%= dose.ingredient.name %> <%= link_to "delete", dose_path(dose), method: :delete  %></li>
+            <% end %>
+        </p>
 
 
+        <%= link_to 'Back to Menu', cocktails_path %>
 
-<p>
-    <strong>Ingredients: </strong>
-    <% @cocktail.doses.each do |dose| %>
-      <li><%= dose.description %> <%= dose.ingredient.name %> <%= link_to "delete", dose_path(dose), method: :delete  %></li>
-    <% end %>
-</p>
+        <%= link_to '✨  Add another ingredient', new_cocktail_dose_path(@cocktail, Dose.new) %>
 
-
-
-<%= link_to 'Back', cocktails_path %>
-
-<%= link_to 'Add a new ingredient', new_cocktail_dose_path(@cocktail, Dose.new) %>
+    </div>
+</div>
