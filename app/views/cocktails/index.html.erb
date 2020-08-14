@@ -1,0 +1,23 @@
+
+
+<div class="title">
+  <h1>🍹 🍸  Welcome to my bar!  🍸 🍹</h1>
+  <h2>What can I get you?</h2>
+</div>
+
+<div class="cards" style="background-image: url('https://unsplash.com/photos/vcn2ndJ5LwE');">
+  <% @cocktails.each do |cocktail| %>
+    <div class="individual_card">
+      <div class="cocktail_name">
+        <%= link_to cocktail.name, cocktail_path(cocktail) %>
+      </div>
+    </div>
+  <% end %>
+</div>
+
+
+
+
+
+<%= link_to "Add a new cocktail", new_cocktail_path %>
+

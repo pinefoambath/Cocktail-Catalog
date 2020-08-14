@@ -1,0 +1,12 @@
+<h1>Cocktails#new</h1>
+<p>Find me in app/views/cocktails/new.html.erb</p></h1>
+
+<h1>Let's add a new cocktail!</h1>
+
+
+<%= simple_form_for [ @cocktail ] do |f| %>
+  <%= f.input :name %>
+<!--   <%= f.association :doses %>
+  <%= f.association :ingredients, as: :check_boxes %> -->
+  <%= f.submit "Submit cocktail", class: "btn btn-primary" %>
+<% end %>

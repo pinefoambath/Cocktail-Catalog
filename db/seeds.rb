@@ -5,3 +5,48 @@
 #
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
+# Ingredient.create(name: "lemon")
+# Ingredient.create(name: "ice")
+# Ingredient.create(name: "mint leaves")
+# Ingredient.create(name: "orange peel")
+# Ingredient.create(name: "salt")
+# Ingredient.create(name: "Gin")
+# Ingredient.create(name: "tonic")
+# Ingredient.create(name: "Rum")
+# Ingredient.create(name: "Brandy")
+# Ingredient.create(name: "Champagne")
+# Ingredient.create(name: "Tomatoe juice")
+# Ingredient.create(name: "Worcestershire sauce")
+# Ingredient.create(name: "Aperol")
+# Ingredient.create(name: "Apple juice")
+# Ingredient.create(name: "Prosecco")
+# Ingredient.create(name: "Red wine")
+# Ingredient.create(name: "White wine")
+# Ingredient.create(name: "Bitters")
+# Ingredient.create(name: "Egg white")
+# Ingredient.create(name: "Cream")
+# Ingredient.create(name: "Sugar")
+# Ingredient.create(name: "Lime")
+# Ingredient.create(name: "Pineapple juice")
+# Ingredient.create(name: "Coconut juice")
+# Ingredient.create(name: "Vodka")
+# Ingredient.create(name: "Tabasco sauce")
+# Ingredient.create(name: "Pepper")
+
+# # Cocktail.create(name: "Gin and Tonic")
+# Dose.create(description: "50ml")
+# Dose.create(description: "25ml")
+# Dose.create(description: "100ml")
+
+
+# require 'json'
+# require 'open-uri'
+
+# url = "https://www.thecocktaildb.com/api/json/v1/1/list.php?i=list"
+# json = JSON.parse(open(url).read)
+
+# json["drinks"].each do |ingredient|
+#     Ingredient.create(name: ingredient["strIngredient1"])
+
+# end
+Ingredient.create(name: "Green olives")
