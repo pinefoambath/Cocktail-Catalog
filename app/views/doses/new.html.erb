@@ -1,12 +1,11 @@
-<h1>Doses#new</h1>
-<p>Find me in app/views/doses/new.html.erb</p>
+<h1>✨Ingredients✨</h1>
 
-<h1>Time to add some more doses</h1>
+<h1>Time to add more yumminess!</h1>
 
 
 
 <%= simple_form_for [ @cocktail, @dose ] do |f| %>
   <%= f.input :description %>
   <%= f.association :ingredient %>
-  <%= f.submit "Submit dose", class: "btn btn-primary" %>
+  <%= f.submit "Add this as ingredient", class: "btn btn-primary" %>
 <% end %>
