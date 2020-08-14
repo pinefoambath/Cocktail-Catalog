@@ -39,14 +39,13 @@
 # Dose.create(description: "100ml")
 
 
-# require 'json'
-# require 'open-uri'
+require 'json'
+require 'open-uri'
 
-# url = "https://www.thecocktaildb.com/api/json/v1/1/list.php?i=list"
-# json = JSON.parse(open(url).read)
+url = "https://www.thecocktaildb.com/api/json/v1/1/list.php?i=list"
+json = JSON.parse(open(url).read)
 
-# json["drinks"].each do |ingredient|
-#     Ingredient.create(name: ingredient["strIngredient1"])
+json["drinks"].each do |ingredient|
+    Ingredient.create(name: ingredient["strIngredient1"])
 
-# end
-Ingredient.create(name: "Green olives")
+
