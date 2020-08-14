@@ -1,10 +1,11 @@
 .add_new {
-
+  display: flex
+  justify-content: center;
   background-color: lightgrey;
   padding: 16px;
-  font-size: 16px;
+  font-size: 24px;
   border-radius: 15px;
-  width: 100px;
+  width: 300px;
   text-align: center;
   margin-left: 42px;
   margin-top: 34px;
