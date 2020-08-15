@@ -30,8 +30,19 @@
 # Ingredient.create(name: "Pineapple juice")
 # Ingredient.create(name: "Coconut juice")
 # Ingredient.create(name: "Vodka")
-# Ingredient.create(name: "Tabasco sauce")
-# Ingredient.create(name: "Pepper")
+Ingredient.create(name: "Ginger beer")
+Ingredient.create(name: "lime juice")
+Ingredient.create(name: "Ice cubes")
+Ingredient.create(name: "White rum")
+Ingredient.create(name: "Aperol")
+Ingredient.create(name: "Prosecco")
+Ingredient.create(name: "Orange peel")
+Ingredient.create(name: "Soda")
+Ingredient.create(name: "Coconut cream")
+Ingredient.create(name: "Campari")
+Ingredient.create(name: "Red Vermouth")
+
+
 
 # # Cocktail.create(name: "Gin and Tonic")
 # Dose.create(description: "50ml")
