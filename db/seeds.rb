@@ -47,5 +47,5 @@ json = JSON.parse(open(url).read)
 
 json["drinks"].each do |ingredient|
     Ingredient.create(name: ingredient["strIngredient1"])
-
+end
 
