@@ -1,29 +1,31 @@
-<div class="show_container" >
-   <div class="show_image">
-      <%= cl_image_tag @cocktail.photo.key, height: 500, width: 600, crop: :fill %>
-   </div>
+<div class="show_main_section" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(220,220,220,0.3)), url('https://images.unsplash.com/photo-1514933651103-005eec06c04b?ixlib=rb-1.2.1&auto=format&fit=crop&w=1567&q=80')">
 
-    <div class="show_instructions">
+  <div class="show_container" >
+     <div class="show_image">
+        <%= cl_image_tag @cocktail.photo.key, height: 500, width: 600, crop: :fill %>
+     </div>
 
-        <h1>You've selected a</h1>
+      <div class="show_instructions">
+        <div class="instructions_title">
+          <h1>✨ <%= @cocktail.name %> ✨</h1>
+          <h2>Excellent choice !</h2>
+          <strong>Ingredients: </strong>
+        </div>
 
-        <h1>
-            <%= @cocktail.name %>!
-        </h1>
-        <h2>Excellent choice ✨ !</h2>
+          <div>
+              <% @cocktail.doses.each do |dose| %>
+                <li><%= dose.description %> <%= dose.ingredient.name %> <%= link_to "delete", dose_path(dose), method: :delete  %></li>
+              <% end %>
+          </div>
 
-
-        <p>
-            <strong>For this let's use the following ingredients: </strong>
-            <% @cocktail.doses.each do |dose| %>
-              <li><%= dose.description %> <%= dose.ingredient.name %> <%= link_to "delete", dose_path(dose), method: :delete  %></li>
-            <% end %>
-        </p>
-
-
-        <%= link_to 'Back to Menu', cocktails_path %>
-
-        <%= link_to '✨  Add another ingredient', new_cocktail_dose_path(@cocktail, Dose.new) %>
-
-    </div>
+        <div class="show_buttons">
+          <div class="show_button">
+            <%= link_to '✨  Back to Menu', cocktails_path %>
+          </div>
+          <div class="show_button">
+            <%= link_to '✨  Add ingredient', new_cocktail_dose_path(@cocktail, Dose.new) %>
+        </div>
+        </div>
+      </div>
+  </div>
 </div>

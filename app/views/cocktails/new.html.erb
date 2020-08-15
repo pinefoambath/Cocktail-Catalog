@@ -1,11 +1,13 @@
-<h1>Cocktails#new</h1>
-<p>Find me in app/views/cocktails/new.html.erb</p></h1>
+<div class="new_main_section" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(220,220,220,0.3)), url('https://images.unsplash.com/photo-1514933651103-005eec06c04b?ixlib=rb-1.2.1&auto=format&fit=crop&w=1567&q=80')">
 
-<h1>Let's add a new cocktail!</h1>
-
-
-<%= simple_form_for [ @cocktail ] do |f| %>
-  <%= f.input :name %>
-  <%= f.input :photo, as: :file %>
-  <%= f.submit "Submit cocktail", class: "btn btn-primary" %>
-<% end %>
+  <div class"new_content_container">
+    <div>
+      <h2 class="title">Add a new cocktail:</h2>
+    </div>
+    <%= simple_form_for [ @cocktail ] do |f| %>
+      <%= f.input :name %>
+      <%= f.input :photo, as: :file %>
+      <%= f.submit "Submit cocktail", class: "btn btn-primary" %>
+    <% end %>
+  </div>
+</div>
