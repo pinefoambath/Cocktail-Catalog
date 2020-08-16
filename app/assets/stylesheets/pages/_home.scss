@@ -96,8 +96,7 @@
 
   .show_container {
   grid-template-columns: 1fr;
-}
-
+  }
 
 
 }
@@ -109,15 +108,12 @@
     }
 
     .title h1 {
-  font-size: 24px;
-  }
+    font-size: 24px;
+    }
 
     .show_container {
-  grid-template-columns: 1fr;
-
-  .show_container {
-    grid-template-columns: 1fr;
-  }
+     grid-template-columns: 1fr;
+    }
 
 }
 // Small devices (landscape phones, 576px and up)
