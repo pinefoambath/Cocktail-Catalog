@@ -20,11 +20,11 @@
 
         <div class="show_buttons">
           <div class="show_button">
-            <%= link_to '✨  Back to Menu', cocktails_path %>
+            <%= link_to '✨  Add ingredient', new_cocktail_dose_path(@cocktail, Dose.new) %>
           </div>
           <div class="show_button">
-            <%= link_to '✨  Add ingredient', new_cocktail_dose_path(@cocktail, Dose.new) %>
-        </div>
+            <%= link_to '✨  Back to Menu', cocktails_path %>
+          </div>
         </div>
       </div>
   </div>

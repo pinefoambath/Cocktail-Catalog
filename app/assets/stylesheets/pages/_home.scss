@@ -15,6 +15,7 @@
 .add_new:hover {
   background-color: $gray;
   text-decoration: none;
+  transition: 0.3s ease-in-out;
 }
 
 
@@ -36,11 +37,12 @@
 
 }
 
-.title h1 {
+.title h1 h2 {
   font-size: 80px;
   font-style: bold;
   font-family: "Work Sans", "Helvetica", "sans-serif";
   text-shadow: 2px 2px #000000;
+  text-align: center
 }
 
 .cards {
@@ -71,11 +73,11 @@
   box-shadow: 0 0 15px rgba(0,0,0,0.2);
   border-style: double;
   border-color: $blue;
-  transition-property: all;
-  transition-duration: 0.3s;
-  transition-timing-function: ease-in-out;
-  transition-delay: 0s;
   text-shadow: 2px 2px #000000;
+  transition: 0.3s ease-in-out;
+   &:hover {
+    transform: scale(1.05);
+  }
 }
 
 
