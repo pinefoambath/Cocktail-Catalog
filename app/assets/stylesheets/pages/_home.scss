@@ -40,6 +40,7 @@
   font-size: 80px;
   font-style: bold;
   font-family: "Work Sans", "Helvetica", "sans-serif";
+  text-shadow: 2px 2px #000000;
 }
 
 .cards {
@@ -70,6 +71,11 @@
   box-shadow: 0 0 15px rgba(0,0,0,0.2);
   border-style: double;
   border-color: $blue;
+  transition-property: all;
+  transition-duration: 0.3s;
+  transition-timing-function: ease-in-out;
+  transition-delay: 0s;
+  text-shadow: 2px 2px #000000;
 }
 
 
@@ -96,6 +102,24 @@
 
 }
 
+
+@media (min-width: 320px) {
+  .cards {
+    grid-template-columns: 1fr;
+    }
+
+    .title h1 {
+  font-size: 24px;
+  }
+
+    .show_container {
+  grid-template-columns: 1fr;
+
+  .show_container {
+    grid-template-columns: 1fr;
+  }
+
+}
 // Small devices (landscape phones, 576px and up)
 @media (min-width: 576px) {
   .cards {
@@ -116,6 +140,8 @@
 
 
 }
+
+
 
 // Medium devices (tablets, 768px and up)
 @media (min-width: 768px) {
