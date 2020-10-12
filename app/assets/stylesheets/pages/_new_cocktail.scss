@@ -1,0 +1,17 @@
+.new_main_section {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  object-fit: contain;
+
+}
+
+.new_content_container {
+    color: $blue;
+}
+
+#title_new_cocktail {
+
+  font-color: $blue;
+}

@@ -1,1 +1,150 @@
-// Specific CSS for your home-page
+
+.button_container {
+  display: flex;
+  justify-content: center;
+  padding-bottom: 34px;
+}
+.add_new {
+  padding: 16px;
+  font-size: 24px;
+  border-radius: 30px;
+  text-align: center;
+  margin-top: 16px;
+}
+
+.add_new:hover {
+  background-color: $gray;
+  text-decoration: none;
+  transition: 0.3s ease-in-out;
+}
+
+
+
+.main_section {
+  width: 100%;
+  min-height: 90vh;
+  object-fit: contain;
+}
+
+.title {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 34px;
+  padding-top: 34px;
+  color: white;
+
+}
+
+.title h1 h2 {
+  font-size: 80px;
+  font-style: bold;
+  font-family: "Work Sans", "Helvetica", "sans-serif";
+  text-shadow: 2px 2px #000000;
+  text-align: center
+}
+
+.cards {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-gap: 34px;
+  margin-left: 42px;
+  margin-right: 42px;
+}
+
+
+.individual_card {
+  background-size: cover;
+  // background-position: center;
+  height: 240px;
+  display: flex;
+  // justify-content: center;
+  // align-items: centerl;
+  align-items: flex-end;
+  justify-content: flex-end;
+  // align-items: center;
+  color: white;
+  background-color: rgba(255, 255, 255, 0.1);
+  font-size: 42px;
+  font-weight: bold;
+  text-shadow: 1px 1px 3px rgba(0,0,0,0.2);
+  border-radius: 5px;
+  box-shadow: 0 0 15px rgba(0,0,0,0.2);
+  border-style: double;
+  border-color: $blue;
+  text-shadow: 2px 2px #000000;
+  transition: 0.3s ease-in-out;
+   &:hover {
+    transform: scale(1.05);
+  }
+}
+
+
+.cocktail_name {
+  margin-right: 8px;
+  margin-bottom: 0px;
+}
+
+// Smallest device
+@media (min-width: 100px) and (max-width: 575px) {
+  .cards {
+    grid-template-columns: 1fr;
+  }
+
+  .title h1 {
+  font-size: 24px;
+  }
+
+  .show_container {
+    grid-template-columns: 1fr;
+  }
+
+
+
+}
+// Small devices (landscape phones, 576px and up)
+@media (min-width: 576px) {
+  .cards {
+    grid-template-columns: 1fr;
+    }
+
+    .title h1 {
+  font-size: 24px;
+  }
+
+    .show_container {
+  grid-template-columns: 1fr;
+
+  .show_container {
+    grid-template-columns: 1fr;
+  }
+}
+
+
+}
+
+
+
+// Medium devices (tablets, 768px and up)
+@media (min-width: 768px) {
+  .cards {
+    grid-template-columns: 1fr 1fr;
+   }
+}
+
+// Large devices (desktops, 992px and up)
+@media (min-width: 992px) {
+  .cards {
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+}
+
+// Extra large devices (large desktops, 1200px and up)
+@media (min-width: 1200px) {
+  .cards {
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+
+
+}

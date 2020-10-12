@@ -1,0 +1,15 @@
+<div class="new_ingredient_section" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(220,220,220,0.3)), url('https://images.unsplash.com/photo-1514933651103-005eec06c04b?ixlib=rb-1.2.1&auto=format&fit=crop&w=1567&q=80')">
+
+
+  <h1 class="title"><%= @cocktail.name  %> ✨ Ingredients</h1>
+
+  <h1 class="title">Add ingredients:</h1>
+
+
+
+  <%= simple_form_for [ @cocktail, @dose ] do |f| %>
+    <%= f.input :description %>
+    <%= f.association :ingredient %>
+    <%= f.submit "Add this as ingredient", class: "btn btn-primary" %>
+  <% end %>
+</div>
